@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <link rel="stylesheet" href="rps.css">
+</head>
+<body>
+
+<main>
+    <!-- Info Screen -->
+    <div class="screen" id="game-info">
+
+        <h1>Rock Paper Scissors</h1>
+
+        <div id="display-player-name">Player Name:</div>
+
+    </div>
+
+
+    <!-- Splash Screen -->
+    <div class="screen" id="splash">
+
+        <div class="splashScreen">
+
+            <h2>Start the Game</h2>
+
+            <div class="flex">
+                <input type="text" id="input-player-name" placeholder="Enter Player Name">
+                <button type="button" id="submit-name-btn">Submit Name</button>
+                <button type="button" id="start-btn">Start Game</button>
+            </div>
+        
+            <div class="labels">
+                <input type="radio" id="3-rounds" name="rounds" value="2" checked>
+                <label for="3-rounds">Best of 3</label>
+                <input type="radio" id="5-rounds" name="rounds" value="3">
+                <label for="5-rounds">Best of 5</label>
+                <input type="radio" id="7-rounds" name="rounds" value="4">
+                <label for="7-rounds">Best of 7</label>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Game Screen -->
+
+    <div class="screen hide" id="game">
+        <div class="choicesDisplay">
+            <div class="choiceImage" id= "player-choice-img"></div>
+            <div class="choiceImage" id= "computer-choice-img"></div>
+        </div>
+        <div class="imageNameDisplay"> <h2 id="player-score">Player : 0</h2> <h2 id="computer-score">Computer : 0</h2></div>
+        
+        <div class="playerButtons" id="player-choice-btn">
+            <button type="button" onclick="game.choicesMade('rock')" id="rock-btn">Rock</button>
+            <button type="button" onclick="game.choicesMade('paper')" id="paper-btn">Paper</button>
+            <button type="button" onclick="game.choicesMade('scissors')" id="scissors-btn">Scissors</button>
+        </div>
+
+        <p id="round-status"></p>
+
+
+    <!-- Game Over Screen -->
+
+        <div class="smallScreen hide" id="game-over">
+            <h3 id="winner-status"></h3>
+            <button id="play-again-btn">Play Again</button>
+            <button id="main-menu-btn">Main Menu</button>
+        </div>
+
+        
+    </div>       
+</main>
+
+
+<footer>
+    <p>Created by <a href="https://sheryar.ca/">Sher Yar Saeed</a></p>
+</footer>
+    
+</body>
+
+<script src="rps.js"></script>
+
+</html>
